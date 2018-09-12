@@ -42,7 +42,7 @@ docker-compose up
 
 ### Standalone
 
-To run each application as standalone service, just run:
+To run each application as standalone service (needs Redis), just run:
 
 ```bash
 cd ./apps/<service>
@@ -50,15 +50,28 @@ npm run install
 npm run start
 ```
 
+## How to test?
+
+To run the tests using [Jest](https://jestjs.io/) and [Enzyme](http://airbnb.io/enzyme/) in the case of the [dashboard](https://github.com/mgpdev/teravoz-challenge/blob/master/apps/dashboard/package.json#L38):
+
+```bash
+cd ./apps/<service>
+npm run install
+npm run test
+```
+
 ## How to access?
 
 ```bash
-# Teravoz API
-http://localhost:3002/
+# Redis service
+redis://localhost:6379
 
-# Webhook API
-http://localhost:3001/
+# Teravoz API
+http://localhost:3002
+
+# Webhook API and WebSocket
+http://localhost:3001
 
 # Dashboard
-http://localhost:3000/
+http://localhost:3000
 ```
