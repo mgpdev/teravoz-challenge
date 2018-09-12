@@ -1,0 +1,18 @@
+{
+  "name": "mgp-teravoz-challenge",
+  "version": "1.0.0",
+  "description": "This is a implementation of the Terravoz Challenge.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mgpdev/teravoz-challenge.git"
+  },
+  "author": "MGP",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mgpdev/teravoz-challenge/issues"
+  },
+  "homepage": "https://github.com/mgpdev/teravoz-challenge#readme"
+}

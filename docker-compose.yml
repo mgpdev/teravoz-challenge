@@ -1,0 +1,41 @@
+version: "3"
+services:
+  webhook:
+    build: apps/webhook
+    ports:
+      - "3001:3001"
+    depends_on:
+      - "redis"
+    environment:
+      NODE_ENV: production
+      PORT: 3001
+      WS_TERAVOZ: http://teravoz:3002
+      REDIS_URL: redis://cache
+  dashboard:
+    build: apps/dashboard
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: production
+      HOST: 0.0.0.0
+      PORT: 3000
+      WS_WEBHOOK: http://webhook:3001
+  teravoz:
+    build: apps/teravoz-api
+    ports:
+      - "3002:3002"
+    depends_on:
+      - "redis"
+    environment:
+      DEBUG_MODE: 1
+      NODE_ENV: production
+      PORT: 3002
+      WS_WEBHOOK_ENDPOINT: http://webhook:3001/webhook
+      REDIS_URL: redis://cache
+  redis:
+    image: redis
+    container_name: cache
+    expose:
+      - 6379
+    ports:
+      - 6379:6379

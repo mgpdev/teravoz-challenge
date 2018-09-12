@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NavBar /> render() renders the component 1`] = `"<div><header class=\\"MuiPaper-root-9 MuiPaper-elevation4-15 MuiAppBar-root-1 MuiAppBar-positionStatic-5 MuiAppBar-colorPrimary-7\\"><div class=\\"MuiToolbar-root-36 MuiToolbar-regular-38 MuiToolbar-gutters-37\\"><h2 class=\\"MuiTypography-root-40 MuiTypography-title-46 MuiTypography-colorInherit-59\\">Teravoz Dashboard</h2></div></header></div>"`;

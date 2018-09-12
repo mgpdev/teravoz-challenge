@@ -1,0 +1,30 @@
+{
+  "name": "webhook",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "compression": "^1.7.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "helmet": "^3.13.0",
+    "redis": "^2.8.0",
+    "socket.io": "^2.1.1"
+  },
+  "scripts": {
+    "test": "jest --detectOpenHandles",
+    "start": "nodemon src/."
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "babel-loader": "^8.0.2",
+    "jest": "^23.5.0",
+    "nodemon": "^1.18.4"
+  },
+  "jest": {
+    "transform": {}
+  }
+}
